@@ -1,7 +1,8 @@
 const App = {
   data() {
     return {
-      counter: 23
+      counter: 0,
+      title: 'Счетчик',
     }
   }
   
