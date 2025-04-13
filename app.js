@@ -18,11 +18,7 @@ const App = {
       this.inputValue = ''
     },
     
-    inputKeyPress(event) {
-      if (event.key === 'Enter') {
-        this.addNewNote()
-      }
-    }
+    
   }
 }
 Vue.createApp(App).mount('#app')
