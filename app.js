@@ -15,6 +15,7 @@ const App = {
     
     addNewNote() {
       this.notes.push(this.inputValue)
+      this.inputValue = ''
     }
   }
 }
