@@ -3,10 +3,15 @@ const App = {
     return {
       placeholderString: 'Введите название заметки',
       title: 'Список заметок',
+      inputValue: '',
+    }
+  },
+  methods: {
+    inputChangeHandler(event) {
+      console.log('inputChangeHandler', event.target.value)
+      this.inputValue = event.target.value
     }
   }
-  
 }
 
-const app = Vue.createApp(App).mount('#app')
-
+Vue.createApp(App).mount('#app')
