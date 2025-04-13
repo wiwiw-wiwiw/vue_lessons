@@ -29,13 +29,8 @@
     <hr />
 
     <ul class="list" >
-      <li class="list-item">
-        {{ notes[0] }}
-      </li>
-    </ul>
-    <ul class="list" >
-      <li class="list-item">
-        {{ notes[1] }}
+      <li class="list-item" v-for="mynote in notes">
+        {{ mynote }}
       </li>
     </ul>
 
