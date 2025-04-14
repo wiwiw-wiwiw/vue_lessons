@@ -15,14 +15,14 @@
     <div class="form-control">
       <input 
       type="text" 
-      v-bind:placeholder="placeholderString" 
-      v-bind:value="inputValue"
-      v-on:input="inputChangeHandler"
-      v-on:keypress.enter="addNewNote"
+      :placeholder="placeholderString" 
+      :value="inputValue"
+      @input="inputChangeHandler"
+      @keypress.enter="addNewNote"
     />
 
     </div>
-    <button class="btn" v-on:click="addNewNote">Добавить</button>
+    <button class="btn" @click="addNewNote">Добавить</button>
 
     <hr />
 
@@ -33,6 +33,13 @@
       </li>
     </ul>
     <div v-else>Заметок пока нет. Добавьте первую. </div>
+    <hr>
+    <li>
+      <strong>Общеее оличество заметок: {{ notes.length }}</strong>
+
+      | Удвоенное количество: {{ doubleCountComputed }}
+    </li>
+    
     
   </div>
 </div>
@@ -41,3 +48,11 @@
   <script src="app.js"></script>
 </body>
 </html>
+
+
+<!-- 
+    v-bind: - сокращение просто можно писать - :
+    v-on: - сокращение меняем на -  @ 
+    v-else
+     
+-->

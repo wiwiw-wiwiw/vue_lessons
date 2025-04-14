@@ -16,9 +16,12 @@ const App = {
     addNewNote() {
       if (this.inputValue !== '') {
         this.notes.push(this.inputValue)
+        console.log('After push:', this.notes)
         this.inputValue = ''
       }
     },
+
+ 
 
     removeNote(idx) {
       this.notes.splice(idx, 1)
@@ -29,6 +32,21 @@ const App = {
     },
     
     
-  }
+  },
+  computed: {
+    doubleCountComputed() {
+      console.log('doubleCountComputed')
+      return this.notes.length * 2
+    },
+  },
+  watch: {
+    inputValue(value) {
+      if (value.length > 5) {
+        this.inputValue = ''
+      }
+
+    },
+  },
 }
+
 Vue.createApp(App).mount('#app')
