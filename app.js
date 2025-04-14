@@ -9,9 +9,6 @@ const App = {
   },
   methods: {
     
-    inputChangeHandler(event) {
-      this.inputValue = event.target.value
-    },
     
     addNewNote() {
       if (this.inputValue !== '') {
@@ -41,7 +38,7 @@ const App = {
   },
   watch: {
     inputValue(value) {
-      if (value.length > 5) {
+      if (value.length > 10) {
         this.inputValue = ''
       }
 
