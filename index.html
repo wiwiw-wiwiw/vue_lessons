@@ -40,11 +40,17 @@
         </span>  --> 
         <!-- первый способ -->
 
-        <span :class="{
+        <!-- <span :class="{
           'primary' : true, 
           'bold' : note.length > 5
         }">
         ({{ idx + 1 }}) {{ toUpperCase(note) }} 
+        </span>  -->
+        <!-- второй способ -->
+
+
+        <span :class="['bold', {'primary' : note.length > 5,}]"> 
+          ({{ idx + 1 }}) {{ toUpperCase(note) }} 
         </span> 
 
         <button class="btn danger" v-on:click="removeNote(idx)">Удалить</button>
